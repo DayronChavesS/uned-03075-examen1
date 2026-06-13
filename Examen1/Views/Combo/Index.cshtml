@@ -1,0 +1,88 @@
+﻿@model Examen1.Models.Combo
+
+@{
+    ViewData["Title"] = "Catalogo";
+}
+
+<h1>Catalogo Combos</h1>
+
+<div>
+    <div id="Combo1">
+        <div id="Nombre">
+            <a> <b>Combo Beginner</b> </a>
+        </div>
+        <div id="Imagen">
+            <img src="./assets/buceo1.png" />
+        </div>
+
+        <div id="Descripcion">
+            Para principiantes. Incluye curso PADI Open Water. <br>
+            Dia 1: La clase sera fuera de agua, se explicaran los conceptos. <br>
+            Dia 2: La clase sera teorica y practica, explicaran sobre el equipo. <br>
+            Dia 3: La clase sera 100% en el agua, ejercicios de buceo. <br>
+            Dia 4: La clase sera 100% en el agua, certificacion Open Water. <br>
+        </div>
+
+        <div id="Costo">
+            <b>COSTO: </b> $600
+        </div>
+
+        <br>
+        <form asp-controller="Combo" asp-action="CrearCombo1">
+            <div id="Encargo">
+                <a>Cantidad: </a>
+                <input asp-for="CantidadCombos" type="number" min="1" value="1" /> <br>
+                <a>Horario: </a> <br>
+                <input type="checkbox" id="Combo1_Horario1" asp-for="Horario1" />
+                <label for="Combo1_Horario1"> Lunes a Jueves 2 horas cada dia. </label> <br>
+                <input type="checkbox" id="Combo_Horario2" asp-for="Horario2" />
+                <label for="Combo1_Horario2"> Sabado a Doming 7 horas cada dia. (+$100)</label> <br>
+                <input id="Boton_Combo1" type="submit" value="ENCARGAR" onclick="Avisar()"/>
+            </div>
+        </form>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div id="Combo2">
+        <div id="Nombre">
+            <a> <b>Combo Advanced</b> </a>
+        </div>
+        <div id="Imagen">
+            <img src="./assets/buceo2.png" />
+        </div>
+        <div id="Descripcion">
+            Para avanzados. Incluye curso PADI Advanced Open Water. <br>
+            Dia 1: La clase sera fuera de agua, se explicaran los conceptos avanzados en profundidad. <br>
+            Dia 2: La clase sera 100% practica, con inmersiones a 35 metros. <br>
+            Dia 3: La clase sera 100% en el agua, con inmersiones a 40 metros. <br>
+        </div>
+        <div id="Costo">
+            <b>COSTO: </b> $700
+        </div>
+
+        <br>
+        <form asp-controller="Combo"  asp-action="CrearCombo2">
+            <div id="Encargo">
+                <a>Cantidad: 
+                </a><input asp-for="CantidadCombos" type="number" min="1" value="1" /> <br>
+                <a>Horario: </a> <br>
+                <input type="checkbox" id="Combo2_Horario1" asp-for="Horario1" />
+                <label for="Combo2_Horario1"> Martes a Jueves 3 horas cada dia. </label> <br>
+                <input type="checkbox" id="Combo2_Horario2" asp-for="Horario2" />
+                <label for="Combo2_Horario2"> Viernes a Domingo 3 horas cada dia. (+$150) </label> <br>
+                <input id="Boton_Combo2" type="submit" value="ENCARGAR" onclick="Avisar()"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function Avisar()
+    {
+        alert('Se a creado el encargo correctamente.')
+    }
+
+</script>

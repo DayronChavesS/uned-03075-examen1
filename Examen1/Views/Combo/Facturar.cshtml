@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Facturar";
+    var Cantidad_Combo1 = ViewBag.CantCombo1;
+    var Cantidad_Combo2 = ViewBag.CantCombo2;
+    var Subtotal = ViewBag.Subtotal;
+    var Monto_Descuento = ViewBag.Monto_Descuento;
+    var Monto_IVA = ViewBag.Monto_IVA;
+    var Monto_Total = ViewBag.Monto_Total;
+    var Monto_Cancelar = ViewBag.Monto_Cancelar;
+}
+
+<h1> Facturar </h1>
+
+<div>
+    <div id="Combo1">
+        <a> Combo Beginner </a> <br>
+        <a> Cantidad: @Cantidad_Combo1 </a>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="Combo2">
+        <a> Combo Advanced </a> <br>
+        <a> Cantidad: @Cantidad_Combo2 </a>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="cantidades">
+        <a> Subtotal: </a>
+        <a> @Subtotal </a> <br>
+
+        <a> Monto de Descuento: </a>
+        <a> @Monto_Descuento </a> <br>
+
+        <a> Monto de IVA: </a>
+        <a> @Monto_IVA </a> <br>
+
+        <a> Monto Total: </a>
+        <a> @Monto_Total </a> <br>
+
+        <a> Monto Total a Cancelar: </a>
+        <a> @Monto_Cancelar </a> <br>
+    </div>
+
+</div>
